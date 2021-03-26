@@ -11,22 +11,19 @@ export class ProductService {
   constructor( private httpclient:HttpClient) { }
 
   getAllProducts(){
-
-      
-
       return this.httpclient.get<Product[]>(this.productApi);
   }
 
-postproduct(){
-  console.log("test")
-  this.httpclient.post('https://fakestoreapi.com/products', {
-    title: 'test product',
-    price: 13.5,
-    description: 'lorem ipsum set',
-    image: 'https://i.pravatar.cc',
-    category: 'electronic'
-});
-}
+  postproduct(){
+    console.log("test")
+    this.httpclient.post('https://fakestoreapi.com/products', {
+      title: 'test product',
+      price: 13.5,
+      description: 'lorem ipsum set',
+      image: 'https://i.pravatar.cc',
+      category: 'electronic'
+      });
+  }
 
 }
 
