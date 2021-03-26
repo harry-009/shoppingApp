@@ -1,0 +1,160 @@
+<!---->
+<!-- <x -->
+<!---->
+
+<!-- banner -->
+<section class="ab-info-main py-5">
+  <div class="container py-lg-3">
+      <div class="ab-info-grids">
+          <h3 class="tittle text-center mb-lg-5 mb-3">Our products</h3>
+          <div id="products" class="row view-group">
+              <div class="item col-lg-4 mt-3" *ngFor="let product of products">
+                  <div class="thumbnail card">
+                      <div class="img-event">
+                          <img class="group list-group-image img-fluid" [src]="product.image" alt="" style="height:300px; padding: 10px"/>
+                      </div>
+                      <div class="caption card-body">
+                          <h4 class="group card-title inner list-group-item-heading">
+                              {{product.title | slice:0:20}}</h4>
+                          <p class="group inner list-group-item-text">{{product.description | slice:0:50}} </p>
+                          <div class="row">
+                              <div class="col-6">
+                                  <p class="lead">${{product.price}}</p>
+                              </div>
+                              <div class="col-6">
+                                <p class="lead">
+                                  <span class="badge badge-dark">{{product.category | titlecase }}</span>
+                                  </p>
+                              </div>
+                          </div>
+                          <div class="row">
+                            <div class="ban-buttons">
+                              <a class="btn btn-course" href="single.html">Add to Cart</a>
+
+                            </div>
+                            <div class="col-6 ban-buttons">
+                                <a class="btn1" href="single.html">Detail</a>
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+              
+              
+              
+              <!-- <div class="item col-lg-4">
+                  <div class="thumbnail card">
+                      <div class="img-event">
+                          <img class="group list-group-image img-fluid" src="assets/images/img5.jpg" alt="" />
+                      </div>
+                      <div class="caption card-body">
+                          <h4 class="group card-title inner list-group-item-heading">
+                              Blog Post 2</h4>
+                          <p class="group inner list-group-item-text">
+                              Lorem ipsum dolor sit amet, consectetuer adipiscing elit,dolore magna aliquam volutpat.</p>
+                          <div class="row">
+                              <div class="col-6">
+                                  <p class="lead">
+                                      $825.00</p>
+                              </div>
+                              <div class="col-6 ban-buttons">
+                                  <a class="btn btn-course" href="single.html">View More</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="item col-lg-4">
+                  <div class="thumbnail card">
+                      <div class="img-event">
+                          <img class="group list-group-image img-fluid" src="assets/images/img3.jpg" alt="" />
+                      </div>
+                      <div class="caption card-body">
+                          <h4 class="group card-title inner list-group-item-heading">
+                              Blog Post 3</h4>
+                          <p class="group inner list-group-item-text">
+                              Lorem ipsum dolor sit amet, consectetuer adipiscing elit,dolore magna aliquam volutpat.</p>
+                          <div class="row">
+                              <div class="col-6">
+                                  <p class="lead">
+                                      $730.00</p>
+                              </div>
+                              <div class="col-6 ban-buttons">
+                                  <a class="btn btn-course" href="single.html">View More</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="item col-lg-4 mt-lg-4">
+                  <div class="thumbnail card">
+                      <div class="img-event">
+                          <img class="group list-group-image img-fluid" src="assets/images/img4.jpg" alt="" />
+                      </div>
+                      <div class="caption card-body">
+                          <h4 class="group card-title inner list-group-item-heading">
+                              Blog Post 4</h4>
+                          <p class="group inner list-group-item-text">
+                              Lorem ipsum dolor sit amet, consectetuer adipiscing elit,dolore magna aliquam volutpat.</p>
+                          <div class="row">
+                              <div class="col-6">
+                                  <p class="lead">
+                                      $634.00</p>
+                              </div>
+                              <div class="col-6 ban-buttons">
+                                  <a class="btn btn-course" href="single.html">View More</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="item col-lg-4 mt-lg-4">
+                  <div class="thumbnail card">
+                      <div class="img-event">
+                          <img class="group list-group-image img-fluid" src="assets/images/img6.jpg" alt="" />
+                      </div>
+                      <div class="caption card-body">
+                          <h4 class="group card-title inner list-group-item-heading">
+                              Blog Post 5</h4>
+                          <p class="group inner list-group-item-text">
+                              Lorem ipsum dolor sit amet, consectetuer adipiscing elit,dolore magna aliquam volutpat.</p>
+                          <div class="row">
+                              <div class="col-6">
+                                  <p class="lead">
+                                      $729.00</p>
+                              </div>
+                              <div class="col-6 ban-buttons">
+                                  <a class="btn btn-course" href="single.html">View More</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="item col-lg-4 mt-lg-4">
+                  <div class="thumbnail card">
+                      <div class="img-event">
+                          <img class="group list-group-image img-fluid" src="assets/images/img7.jpg" alt="" />
+                      </div>
+                      <div class="caption card-body">
+                          <h4 class="group card-title inner list-group-item-heading">
+                              Blog Post 6</h4>
+                          <p class="group inner list-group-item-text">
+                              Lorem ipsum dolor sit amet, consectetuer adipiscing elit,dolore magna aliquam volutpat.</p>
+                          <div class="row">
+                              <div class="col-6">
+                                  <p class="lead">
+                                      $620.00</p>
+                              </div>
+                              <div class="col-6 ban-buttons">
+                                  <a class="btn btn-course" href="single.html">View More</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div> -->
+
+          </div>
+      </div>
+  </div>
+</section>
+<!-- //banner -->
