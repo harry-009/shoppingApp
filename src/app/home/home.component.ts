@@ -23,12 +23,23 @@ export class HomeComponent implements OnInit {
 		});
 		console.log(this.products);
 
-		this.addProduct();
+		//this.addProduct();
+		this.onSubmit();
 
 	}
 
 	addProduct() {
 		this.productService.postproduct();
+	}
+
+	onSubmit(){
+		console.log("In Home component");
+		// addNewProduct
+		let product: Product = {id:0, title: "my new product", description: "demo", price:10, image:"", category:""};
+
+		this.productService.addNewProduct(product).subscribe(data => {
+			console.log(data);
+		});
 	}
 
 }
