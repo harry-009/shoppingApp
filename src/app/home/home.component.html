@@ -12,8 +12,10 @@
                 <div class="item col-lg-4 mt-3" *ngFor="let product of products">
                     <div class="thumbnail card">
                         <div class="img-event">
+                            <a [routerLink]="['/productdetails', product.id]">
                             <img class="group list-group-image img-fluid" [src]="product.image" alt=""
                                 style="height:300px; padding: 10px" />
+                            </a>
                         </div>
                         <div class="caption card-body">
                             <h4 class="group card-title inner list-group-item-heading">
