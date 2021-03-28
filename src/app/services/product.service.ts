@@ -7,7 +7,7 @@ import { Product } from '../modals/product';
 })
 export class ProductService {
 
-    productApi:string = "https://fakestoreapi.com/products?limit=15";
+    productApi:string = "https://fakestoreapi.com/products?limit=9";
   constructor( private httpclient:HttpClient) { }
 
   getAllProducts(){
@@ -23,6 +23,12 @@ export class ProductService {
       image: 'https://i.pravatar.cc',
       category: 'electronic'
       });
+  }
+
+  getProductById(id: number){
+    let apiUrl = `https://fakestoreapi.com/products/${id}`;
+    return this.httpclient.get<Product>(apiUrl);
+
   }
 
 }

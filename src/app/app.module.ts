@@ -7,13 +7,20 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
+import { ShopComponent } from './shop/shop.component';
+import { MensComponent } from './mens/mens.component';
+import { ProductdetailsComponent } from './productdetails/productdetails.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    ShopComponent,
+    MensComponent,
+    ProductdetailsComponent,
+
   ],
   imports: [
     BrowserModule,
