@@ -38,5 +38,11 @@ export class ProductService {
         return this.httpclient.post(apiPostUrl, JSON.stringify(product));   
     }
 
+    deleteProduct(id:number){
+        let deleteAPIurl = `https://fakestoreapi.com/products/${id}`;
+
+        return this.httpclient.delete(deleteAPIurl);
+    }
+
 }
 

@@ -228,9 +228,9 @@
                                 </ul> -->
 
 
-                                    <button><a [routerLink] = "['/productdetails/', product.id]"> product details</a> </button>
-                                    <button>Cart</button>
-
+                                    <a class="btn btn-sm btn-info" [routerLink] = "['/productdetails/', product.id]"> product details</a>
+                                    &nbsp;
+                                    <button class="btn btn-sm btn-danger" (click)="deleteProduct(product.id)">Delete</button>
 
                             </div>
                         </div>
