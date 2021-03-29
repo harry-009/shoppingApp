@@ -1,13 +1,18 @@
-<ol class="breadcrumb">
+<!-- <ol class="breadcrumb">
     <li class="breadcrumb-item">
         <a href="index.html">Home</a>
     </li>
     <li class="breadcrumb-item active">Single Page</li>
-</ol>
+</ol> -->
 <!---->
 <!-- banner -->
 <section class="ab-info-main py-md-5 py-4">
     <div class="container py-md-3">
+        <h1 *ngIf="isLoading" class="text-center spinner-border">Loading...</h1>
+        <div class="ab-info-grids" *ngIf="!isLoading">
+            <h3 class="tittle text-center mb-lg-5 mb-3">shop products</h3>
+
+
         <!-- top Products -->
         <div class="row">
             <!-- product left -->
@@ -196,8 +201,12 @@
                     <div class="col-md-4 product-men" *ngFor="let product of products">
                         <div class="product-shoe-info shoe text-center">
                             <div class="men-thumb-item">
-                                <img class="img-fluid" [src] ="product.image" alt="" style="height:300px; padding: 10px"/>
+                                <a [routerLink]="['/productdetails', product.id]">
 
+
+                                 <img class="img-fluid" [src] ="product.image" alt="" style="height:300px; padding: 10px"/>
+
+                                </a>
                                 <span class="product-new-top">{{product.category}}</span>
                             </div>
                             <div class="item-info-product">
@@ -444,6 +453,7 @@
                     <a href="shop-single.html" class="btn">Shop Now</a>
                 </div>
             </div>
+        </div>
         </div>
     </div>
 </section> 

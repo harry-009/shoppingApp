@@ -35,10 +35,21 @@ export class HomeComponent implements OnInit {
 	onSubmit(){
 		console.log("In Home component");
 		// addNewProduct
-		let product: Product = {id:0, title: "my new product", description: "demo", price:10, image:"", category:""};
+		let product: Product = {	id: 0, 
+									title: "my new product", //productForm.controls.title 
+									description: "demo", 
+									price:10, 
+									image:"", 
+									category:""
+								};
 
 		this.productService.addNewProduct(product).subscribe(data => {
 			console.log(data);
+			//redirect to shop page.
+			
+			//privete router: Router ==> constructor.
+			
+			//this.router.navigate("/shop");
 		});
 	}
 
